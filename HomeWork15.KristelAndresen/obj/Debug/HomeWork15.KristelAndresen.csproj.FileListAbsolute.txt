@@ -1,0 +1,15 @@
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\HomeWork15.KristelAndresen.exe.config
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\HomeWork15.KristelAndresen.exe
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\HomeWork15.KristelAndresen.pdb
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\obj\Debug\HomeWork15.KristelAndresen.csprojAssemblyReference.cache
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\obj\Debug\HomeWork15.KristelAndresen.csproj.CoreCompileInputs.cache
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\obj\Debug\HomeWork15.KristelAndresen.exe
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\obj\Debug\HomeWork15.KristelAndresen.pdb
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\nunit.engine.dll
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\nunit.engine.api.dll
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\nunit.framework.dll
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\nunit.framework.pdb
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\bin\Debug\nunit.framework.xml
+C:\Users\krist\source\repos\HomeWork15.KristelAndresen\HomeWork15.KristelAndresen\obj\Debug\HomeWork15.KristelAndresen.csproj.CopyComplete
