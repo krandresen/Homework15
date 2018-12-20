@@ -10,28 +10,24 @@ namespace HomeWork15.KristelAndresen
     {
         Random rdn = new Random();
         public double _interestRate;
-        public int _minInterestRate;
-        public int _maxInterestRate;
-        public double _customerAssets;
         public double _increasingAssetsPercent;
         public UnfixedInterest()
         {
+            _increasingAssetsPercent = 0.3;
+            _loanName = "Interest";
+            _interestRate = rdn.NextDouble() * (3 - 0.5);
 
-           _increasingAssetsPercent = 0.3;
-           if(_counter % 3 == 0)
-           {
+        }
+        public override void LoanSteps()
+        {
+            base.LoanSteps();
+            if (customerList.Count % 3 == 0)
+            {
                 FindInterest();
-           }
+            }
         }
         public double FindInterest()
         {
-            /*_minInterestRate = 0;
-            _maxInterestRate = 3;
-            _interestRate = rdn.Next(_minInterestRate, _maxInterestRate) + rdn.NextDouble();
-            if (_interestRate < 0.5 || _interestRate > 3)
-            {
-                FindInterest();
-            }*/
             _interestRate = rdn.NextDouble() * (3 - 0.5);
             _loanMonthlyPayment = customer._monthlyIncome * _interestRate;
 
@@ -39,9 +35,9 @@ namespace HomeWork15.KristelAndresen
         }
         public void CustomerAssets()
         {
-            double increasingMaxLoanAmount = _customerAssets * _increasingAssetsPercent;
+            double increasingMaxLoanAmount = customer._assets * _increasingAssetsPercent;
             _maxLoanAmount += increasingMaxLoanAmount;
-            if(_customerAssets > 10000)
+            if(customer._assets > 10000)
             {
                 _minForLoan = 0;
             }
@@ -51,15 +47,14 @@ namespace HomeWork15.KristelAndresen
             if (customer._age > _maxLoanAge)
             {
                 _maxLoanDuration = 2;
-                _maxLoanAmount = _customerAssets / 2;
+                _maxLoanAmount = customer._assets / 2;
             }
-            
             return true;
         }
         public override void PrintInfo()
         {
             base.PrintInfo();
-            Console.WriteLine("For interest is payed {0} euros.", _interestRate ); // how much is payed for interest
+            Console.WriteLine("For interest is payed {0} euros.", _interestRate * _loanMonthlyPayment); // how much is payed for interest
         }
     }
 }

@@ -29,6 +29,12 @@ namespace HomeWork15.KristelAndresen
 
             UnfixedInterest unfixedInterestLoanSystem = new UnfixedInterest();
             unfixedInterestLoanSystem.GetLoan(mMaasikas);
+            unfixedInterestLoanSystem.GetLoan(aAabel);
+            unfixedInterestLoanSystem.GetLoan(aAabel);
+            unfixedInterestLoanSystem.GetLoan(aAabel);
+            unfixedInterestLoanSystem.GetLoan(aAabel);
+
+
             Console.ReadLine();
         }
     }

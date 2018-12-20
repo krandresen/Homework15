@@ -63,9 +63,13 @@ namespace HomeWork15.KristelAndresen
                 _name = "Jhon Doe";
             }
         }
-        public void PrintInfo()
+        public string GetCustomerNumber()
         {
-            Console.WriteLine("Customer name is {0} and code {1}.", _name, _customerNumber);
+            return _customerNumber;
+        }
+        public void PrintCustomerData()
+        {
+            Console.WriteLine("\nCustomer name is {0} and code {1}.", _name, _customerNumber);
         }
     }
 }

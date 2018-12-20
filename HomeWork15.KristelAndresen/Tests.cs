@@ -13,12 +13,12 @@ namespace HomeWork15.KristelAndresen
     {
         private Customer firstCustomer;
         private Customer secondCustomer;
-        //private Customer thirdCustomer;
-        //private Customer fourthCustomer;
+        private Customer thirdCustomer;
+        private Customer fourthCustomer;
 
         private Standard standardLoan;
         private Insurance insuranceLoan;
-        private UnfixedInterest unfixedInterestLoan; 
+        //private UnfixedInterest unfixedInterestLoan; 
 
         [SetUp]
         public void SetUp()
@@ -32,7 +32,7 @@ namespace HomeWork15.KristelAndresen
             secondCustomer._monthlyIncome = 5000;
             secondCustomer._monthlyObligations = 2000;
             secondCustomer._assets = 10000;
-            /*
+            
             thirdCustomer = new Customer("Ats Aavik");
             thirdCustomer._age = 50;
             thirdCustomer._monthlyIncome = 11000;
@@ -44,10 +44,10 @@ namespace HomeWork15.KristelAndresen
             fourthCustomer._monthlyIncome = 600;
             fourthCustomer._monthlyObligations = 200;
             fourthCustomer._assets = 5000;
-            */
+            
             standardLoan = new Standard();
             insuranceLoan = new Insurance();
-            unfixedInterestLoan = new UnfixedInterest();
+           // unfixedInterestLoan = new UnfixedInterest();
         }
 
         [Test]
@@ -83,6 +83,15 @@ namespace HomeWork15.KristelAndresen
         }
 
         [Test]
+        public void InsuranceLoan_Duration_thirdCustomer_25()
+        {
+            int expected = 25;
+            insuranceLoan.GetLoan(thirdCustomer);
+            int actual = insuranceLoan.FindLoanDuration();
+            Assert.AreEqual(actual, expected);
+        }
+
+        [Test]
         public void StandardLoan_IsValid_firstCustomer1_true()
         {
             bool expected = true;
@@ -98,18 +107,25 @@ namespace HomeWork15.KristelAndresen
             Assert.AreEqual(expected, standardLoan.CheckIfValidForLoan());
         }
         [Test]
+        public void InsuranceLoan_IsValid_fourthCustomer_false()
+        {
+            bool expected = false;
+            insuranceLoan.GetLoan(fourthCustomer);
+            Assert.AreEqual(expected, insuranceLoan.CheckIfValidForLoan());
+        }
+        [Test]
         public void InsuranceLoan_IsValid_secondCustomer_true()
         {
             bool expected = true;
             insuranceLoan.GetLoan(secondCustomer);
             Assert.AreEqual(expected, insuranceLoan.CheckIfValidForLoan());
         }
-        [Test]
+       /* [Test]
         public void UnfixedInterestLoan_isValid_secondCustomer_true()
         {
             bool expected = true;
             unfixedInterestLoan.GetLoan(secondCustomer);
             Assert.AreEqual(expected, unfixedInterestLoan.CheckIfValidForLoan());
-        }
+        }*/
     }
 }

@@ -18,6 +18,8 @@ namespace HomeWork15.KristelAndresen
         public double _loanMonthlyPayment;
         public double _maxLoanAmount;
         public int _counter = 0;
+        public List<Customer> customerList = new List<Customer>();
+
         public Standard()
         {
             _maxLoanAge = 65;
@@ -29,9 +31,11 @@ namespace HomeWork15.KristelAndresen
         public void GetLoan(Customer customer)
         {
             this.customer = customer;
+            customer.PrintCustomerData();
             if(CheckIfValidForLoan())
             {
-                _counter++;
+
+                customerList.Add(customer);
                 LoanSteps();
                 PrintInfo();
             }
